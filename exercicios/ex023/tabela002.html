@@ -34,6 +34,17 @@
             background-color: gray;
             color: white;
         }
+
+        caption {
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: lightgray;
+        }
     </style>
 </head>
 <body>
@@ -41,6 +52,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -50,10 +62,12 @@
     -->
 
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
-            <th>Estado</th>
-            <th>População</th>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 50px;">População</th>
         </thead>
+
         <tbody>
             <td>São Paulo</td>
             <td class="num">45 919 049</td>
@@ -193,8 +207,8 @@
         
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td> <strong>0000</strong></td>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"> <strong>210.147.125</strong></td>
             </tr>
         </tfoot>    
     </table>
